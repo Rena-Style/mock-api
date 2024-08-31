@@ -1,0 +1,1038 @@
+{
+  "uuid": "48f042af-57d5-43f5-82d0-d597c0ec6cae",
+  "lastMigration": 32,
+  "name": "Rena",
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 3021,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "477a3540-e0a4-4af8-ace7-3f228f2f95e4",
+      "name": "Товарные группы",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "804086e6-3c22-49be-b3e5-8d964f77f2a3"
+        },
+        {
+          "type": "route",
+          "uuid": "cedeafe3-f571-486a-8f44-3aaaa0f07899"
+        },
+        {
+          "type": "route",
+          "uuid": "d19c7261-0898-4050-8d63-95ac2dd5bb68"
+        },
+        {
+          "type": "route",
+          "uuid": "d01b1886-8e7c-4996-9600-a6e3db545670"
+        }
+      ]
+    },
+    {
+      "uuid": "ffbcf566-5f7b-4f5d-8843-2cc50661e372",
+      "name": "Товары",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "1a19e2fe-a615-43f3-9698-a65020e792ba"
+        },
+        {
+          "type": "route",
+          "uuid": "c043634f-2212-4428-9468-07617971a808"
+        },
+        {
+          "type": "route",
+          "uuid": "b7f8d84a-6353-4d42-ac4b-c015e48fe669"
+        },
+        {
+          "type": "route",
+          "uuid": "a3ea4509-68cc-4a9b-86ee-feaa491dfd4c"
+        },
+        {
+          "type": "folder",
+          "uuid": "546baec5-d034-45aa-a73f-fcdb75399331"
+        },
+        {
+          "type": "folder",
+          "uuid": "ccf059e9-d18c-416e-b26f-cb5170be54c9"
+        },
+        {
+          "type": "folder",
+          "uuid": "4c275be6-d7f0-404e-8722-aba0c52021be"
+        }
+      ]
+    },
+    {
+      "uuid": "546baec5-d034-45aa-a73f-fcdb75399331",
+      "name": "Изображения",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "bcef29e6-ba2a-482d-a068-3c50cb61d2fe"
+        },
+        {
+          "type": "route",
+          "uuid": "d91df4c9-4199-4e1c-b1f2-87084c7e3331"
+        },
+        {
+          "type": "route",
+          "uuid": "027aa242-63cd-4ba8-96c5-bf633924c458"
+        }
+      ]
+    },
+    {
+      "uuid": "ccf059e9-d18c-416e-b26f-cb5170be54c9",
+      "name": "Характеристики",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "3e334dad-c1ac-4220-bc9c-a98e347deb22"
+        },
+        {
+          "type": "route",
+          "uuid": "9c2130af-3610-41be-94a1-143178463b91"
+        },
+        {
+          "type": "route",
+          "uuid": "0f14e0fb-0351-4303-9c23-997c6798d1fd"
+        }
+      ]
+    },
+    {
+      "uuid": "4c275be6-d7f0-404e-8722-aba0c52021be",
+      "name": "Категории",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "d9e4a8b1-7eef-451b-8653-a870acfda733"
+        },
+        {
+          "type": "route",
+          "uuid": "2737feea-2537-4f2b-8a05-4181c6d5bf6e"
+        },
+        {
+          "type": "route",
+          "uuid": "e53dfe88-faca-4aa8-b93d-1d3951fbb400"
+        }
+      ]
+    },
+    {
+      "uuid": "0e065db9-eed8-4e6d-8a3e-931335a4b927",
+      "name": "Категории",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "de4ab4dd-3339-4c5c-98bd-f046da4433f2"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "804086e6-3c22-49be-b3e5-8d964f77f2a3",
+      "type": "http",
+      "documentation": "Создание товарной группы",
+      "method": "post",
+      "endpoint": "supplier/product-group",
+      "responses": [
+        {
+          "uuid": "22d873a0-572c-4191-ab14-265e1d9ec801",
+          "body": "{\r\n  \"product_group_id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Товарная группа создана",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "fd7151ec-1323-490c-98fb-f36073aef3e4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "Ошибка авторизации",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "92bcb14c-3f6e-446a-bc4d-a32bd13be23c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "Ошибка входных данных",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "jr9u",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "9f40b142-5d6e-41b4-aeb8-32e531874bc1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "Внутренняя ошибка",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "cedeafe3-f571-486a-8f44-3aaaa0f07899",
+      "type": "http",
+      "documentation": "Просмотр товарных групп",
+      "method": "get",
+      "endpoint": "supplier/product-group",
+      "responses": [
+        {
+          "uuid": "a15eebce-4853-46a3-8786-74730251acd1",
+          "body": "[\r\n  {\r\n    \"product_group_id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"name\": \"string\"\r\n  }\r\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Товарные группы просмотрены",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "offset",
+              "value": "0",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "limit",
+              "value": "100",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "be6852cb-274e-43af-83b1-1758c22a010a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "Ошибка авторизации",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a5ceca47-2d0b-4051-ac54-1e16659e0113",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "Ошибка входных данных",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "jr9u",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "cf062552-5759-4dbb-9fe2-67d504fefd6a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "Внутренняя ошибка",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "d19c7261-0898-4050-8d63-95ac2dd5bb68",
+      "type": "http",
+      "documentation": "Изменение товарной группы",
+      "method": "patch",
+      "endpoint": "supplier/product-group/{product_group_id}",
+      "responses": [
+        {
+          "uuid": "46b5c059-3b45-4ac6-857a-532156fc83c2",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "Товарная группа изменена",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "product_group_id",
+              "value": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b4ab84c0-1f65-4f59-a5d6-0e2d03634768",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Товарная группа не найдена",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "product_group_id",
+              "value": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e7a773ea-0de4-45cd-9438-a3ddf6afa6f9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "Ошибка входных данных",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "jr9u",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "44c03ef2-1aef-4af4-945e-5f2b7567e41f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "Внутренняя ошибка",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "d01b1886-8e7c-4996-9600-a6e3db545670",
+      "type": "http",
+      "documentation": "Удаление товарной группы",
+      "method": "delete",
+      "endpoint": "supplier/product-group/{product_group_id}",
+      "responses": [
+        {
+          "uuid": "2acf8bfe-9622-46d6-95f0-81d4818a9ca8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "Товарная группа удалена",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "product_group_id",
+              "value": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f21bcf92-98d5-4f27-aa53-a77343bd7292",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "Ошибка авторизации",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d5194568-c8bb-425c-be61-e2ae50ce940d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Товарная группа не найдена",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "product_group_id",
+              "value": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "cc5722eb-938e-4bfa-8d4b-6e470337503d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "Ошибка входных данных",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "jr9u",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "6f9dfabc-4e94-415d-bf60-f9120657dae1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "Внутренняя ошибка",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "y8ym",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "1a19e2fe-a615-43f3-9698-a65020e792ba",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "supplier/product-group/{product_group_id}/product",
+      "responses": [
+        {
+          "uuid": "6d2180b0-f776-4e21-b334-6d0f393b006f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "c043634f-2212-4428-9468-07617971a808",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "supplier/product-group/{product_group_id}/product",
+      "responses": [
+        {
+          "uuid": "2781b118-4abe-47a6-9feb-2537b3295feb",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "b7f8d84a-6353-4d42-ac4b-c015e48fe669",
+      "type": "http",
+      "documentation": "",
+      "method": "patch",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}",
+      "responses": [
+        {
+          "uuid": "1f12348f-869f-453c-9b01-461e7583714e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "a3ea4509-68cc-4a9b-86ee-feaa491dfd4c",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}",
+      "responses": [
+        {
+          "uuid": "26063b01-6518-43e1-bb65-009ff89efda4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "027aa242-63cd-4ba8-96c5-bf633924c458",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/picture/{picture_number}",
+      "responses": [
+        {
+          "uuid": "3c41a353-5ee7-4baa-9452-20f01f59405b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "bcef29e6-ba2a-482d-a068-3c50cb61d2fe",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/picture/{picture_number}",
+      "responses": [
+        {
+          "uuid": "dc0d90e2-5576-4448-93c6-87f5c3a68ec7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "d91df4c9-4199-4e1c-b1f2-87084c7e3331",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/picture/{picture_number}",
+      "responses": [
+        {
+          "uuid": "5322a066-ebbc-4736-a36f-40360af8852a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3e334dad-c1ac-4220-bc9c-a98e347deb22",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/property/{property_name}",
+      "responses": [
+        {
+          "uuid": "4a81e8b0-fd80-4488-b822-1323ddd2f8ee",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "9c2130af-3610-41be-94a1-143178463b91",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/property/{property_name}",
+      "responses": [
+        {
+          "uuid": "12d1ef52-90d3-4d88-a708-10491068dcb7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "0f14e0fb-0351-4303-9c23-997c6798d1fd",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "Категории",
+      "responses": [
+        {
+          "uuid": "a958e789-170a-4dfa-a367-ab190ead80de",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "d9e4a8b1-7eef-451b-8653-a870acfda733",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/category",
+      "responses": [
+        {
+          "uuid": "589fd7f3-254e-4b9d-8a19-bcb8023b628a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2737feea-2537-4f2b-8a05-4181c6d5bf6e",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/category/{category_id}",
+      "responses": [
+        {
+          "uuid": "0bb3b201-962e-4da7-b851-f508005ae1c4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "e53dfe88-faca-4aa8-b93d-1d3951fbb400",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "supplier/product-group/{product_group_id}/product/{product_id}/category/{category_id}",
+      "responses": [
+        {
+          "uuid": "495895b8-429f-4994-a0cc-25b4426a8149",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "de4ab4dd-3339-4c5c-98bd-f046da4433f2",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "categories",
+      "responses": [
+        {
+          "uuid": "95a315d4-bd53-4912-b520-e8eda110220b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "477a3540-e0a4-4af8-ace7-3f228f2f95e4"
+    },
+    {
+      "type": "folder",
+      "uuid": "ffbcf566-5f7b-4f5d-8843-2cc50661e372"
+    },
+    {
+      "type": "folder",
+      "uuid": "0e065db9-eed8-4e6d-8a3e-931335a4b927"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "ed16acd8-92b0-4975-ba59-31253d6e1fa0",
+      "id": "y8ym",
+      "name": "GeneralErrorResponse",
+      "documentation": "",
+      "value": "{\r\n  \"detail\": \"string\"\r\n}"
+    },
+    {
+      "uuid": "22021582-ba3b-4586-9ea0-5cfc73bdf98b",
+      "id": "jr9u",
+      "name": "ValidationErrorResponse",
+      "documentation": "",
+      "value": "{\r\n  \"detail\": [\r\n    {\r\n      \"location\": [\r\n        \"string\"\r\n      ],\r\n      \"message\": \"string\"\r\n    }\r\n  ],\r\n  \"body\": {}\r\n}"
+    }
+  ],
+  "callbacks": []
+}
